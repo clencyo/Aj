@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         var db = openOrCreateDatabase("AUDIAdb", MODE_PRIVATE, null)
 
         //creating table
-        db.execSQL("CREATE TABLE IF NOT EXISTS users(jina VARCHAR, arafa VARCHAR, kitambulisho INTAGER)")
+        db.execSQL("CREATE TABLE IF NOT EXISTS users(jinamoja VARCHAR, jinambili VACHAR, arafa VARCHAR, nambari VACHAR)")
 
         loginbutton.setOnClickListener {
             //Receive data from the user
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Cannot Submit empty Field", Toast.LENGTH_SHORT).show()
             }else{
                 //Proceed to save your data into the db
-                db.execSQL("INSERT INTO users VALUES('"+firsname+"','"+email+"','"+secname+"','"+password+"')")
+                db.execSQL("INSERT INTO users VALUES("'+firsname+"',"'+email+'","'+secname+'","'+password+'")")
 
                 //Toast a success message
 
